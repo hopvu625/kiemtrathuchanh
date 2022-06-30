@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var n = +prompt('nhập vao n:')
+
+    function sumOfListPrime(x) {
+        var tong = 0;
+        for (var i = 2; i < x; i++) {
+            var flag = 1;
+            for (j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    flag = 0;
+                }
+            }
+            if (flag === 1) {
+                tong += i;
+            }
+        }
+        document.write("tổng các số nguyên tố nhỏ hơn " + n + " là " +tong)
+    }
+
+    sumOfListPrime(n);
+</script>
+</body>
+</html>

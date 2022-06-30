@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Array = [9, 2, 4, 4, 5];
+    let newArray = [];
+    let number = +prompt("nhập vào number:")
+    let x = +prompt("nhập vào sô nguyên x:")
+
+    function insertNumberToArray(arr, x, index) {
+        for (let i = 0; i < arr.length + 1; i++) {
+            if (index < 0 || index > arr.length) {
+                return arr;
+            } else if (i < index) {
+                newArray[i] = arr[i];
+            } else if (i === index) {
+                newArray[i] = x;
+            } else {
+                newArray[i] = arr[i - 1];
+            }
+        }
+        document.write(newArray);
+    }
+
+    insertNumberToArray(Array, x, number)
+</script>
+</body>
+</html>
